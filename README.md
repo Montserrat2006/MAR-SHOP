@@ -8,9 +8,11 @@ Sitio web e-commerce responsivo, moderno y elegante diseñado para la boutique d
 
 - [Descripción General](#-descripción-general)
 - [Arquitectura Multipágina](#-arquitectura-multipágina)
+- [Rediseño Editorial de Inicio (Vino Editorial)](#-rediseño-editorial-de-inicio-vino-editorial)
 - [Tipografía & Formato Sentence Case](#-tipografía--formato-sentence-case)
 - [Catálogo Completo (71 Prendas)](#-catálogo-completo-71-prendas)
-- [Reubicación de la Barra de Avisos](#-reubicación-de-la-barra-de-avisos)
+- [Ubicación & Google Maps](#-ubicación--google-maps)
+- [Horarios de Atención & Instagram](#-horarios-de-atención--instagram)
 - [Sobre Nosotros (Misión, Visión y Valores)](#-sobre-nosotros-misión-visión-y-valores)
 - [Nuevo Número de WhatsApp](#-nuevo-número-de-whatsapp)
 - [Enfoque UX/UI & Mobile-First](#-enfoque-uxui--mobile-first)
@@ -31,10 +33,42 @@ El sitio web permite a las clientas explorar las prendas organizadas por categor
 
 El sitio cuenta con 4 páginas independientes vinculadas de forma coherente en el encabezado y pie de página:
 
-1. **`index.html` (Inicio):** Presentación de la boutique, llamado a la acción *"Ver catálogo"*, métricas clave y previsualización de 6 prendas destacadas de temporada.
-2. **`catalogo.html` (Catálogo):** Catálogo interactivo completo con las 71 prendas de la boutique, filtros de categoría instantáneos, selector de tallas y botones de compra.
-3. **`sobre-nosotros.html` (Sobre nosotros):** Historia oficial de Mar Shop, proceso de selección con proveedores de Guadalajara y la Ciudad de México, tarjetas de *Nuestra misión*, *Nuestra visión* y los 7 valores fundamentales.
-4. **`contacto.html` (Contacto):** Información de atención en Tuxpan, Jalisco, enlace directo al nuevo WhatsApp, horarios y sección de preguntas frecuentes.
+1. **`index.html` (Inicio):** Rediseño editorial estilizado con texturas suaves de papel, arco de medio punto, 4 prendas destacadas por categoría, mini historia y cierre en vino con papel rasgado.
+2. **`catalogo.html` (Catálogo):** Catálogo interactivo completo con las 71 prendas de la boutique, filtros de categoría instantáneos (incluyendo soporte de enlace por parámetro URL), selector de tallas y botones de compra.
+3. **`sobre-nosotros.html` (Sobre nosotros):** Historia oficial de Mar Shop con alineación justificada (`text-justify`), proceso de selección con proveedores de Guadalajara y la Ciudad de México, tarjetas de *Nuestra misión*, *Nuestra visión* y los 7 valores fundamentales.
+4. **`contacto.html` (Contacto):** Información completa en Tuxpan, Jalisco con enlace directo a Google Maps, tarjeta de Horario de atención equilibrada, Instagram oficial y WhatsApp.
+
+---
+
+## 🎨 Rediseño Editorial de Inicio (Vino Editorial)
+
+La página [`index.html`](./index.html) fue rediseñada siguiendo una estética editorial de alta gama:
+
+* **Texturas suaves:** Fondo general que emula papel artesanal texturizado (`bg-paper-texture`) y franja de catálogo en rosa empolvado (`bg-dusty-rose-texture`).
+* **Sección 1 (Hero asimétrico):** Etiqueta `"NUEVA TEMPORADA"`, título en `Playwrite France Moderne` *"Moda accesible y de temporada"*, botones de acción `VER COLECCIÓN` (sólido vino `#5F051C`) y `Pedir por WhatsApp` (subrayado fino), 3 métricas divididas con líneas delgadas (`S · M · L`, `Tuxpan`, `MXN`), y contenedor de fotografía en **arco de medio punto** (`arch-frame`).
+* **Sección 2 (Catálogo destacado):** Fondo rosa empolvado de ancho completo con 4 tarjetas verticales de prendas en una fila: **Blusas**, **Pantalones**, **Faldas** y **Chamarras** (todas con tallas S · M · L y enlace de consulta).
+* **Sección 3 (Mini Sobre nosotros):** Bloque horizontal con foto boutique a la izquierda y a la derecha etiqueta `"SOBRE NOSOTROS"`, título *"Ropa seleccionada, trato directo"*, párrafo descriptivo, reseña de historia y botón discreto hacia `sobre-nosotros.html`.
+* **Sección 4 (Cierre / CTA de WhatsApp):** Bloque vino profundo `#5F051C` con **borde superior irregular / rasgado tipo papel roto** (SVG), rombo divisor `◆`, título *"¿Te gustó algo? Escríbenos"* y botón blush rectangular `PEDIR POR WHATSAPP`.
+* **Footer minimalista:** Enlaces rápidos limpios, ubicación con Google Maps, Instagram `@_amar_mx_` y copyright.
+
+---
+
+## 📍 Ubicación & Google Maps
+
+* **Dirección física:** `Independencia Nacional #50B, Tuxpan, Jalisco`
+* **Enlace a Google Maps:** Configurado con apertura en pestaña nueva (`target="_blank"`):
+  [`Independencia Nacional #50B en Google Maps`](https://www.google.com/maps/search/?api=1&query=Independencia+Nacional+50B%2C+Tuxpan%2C+Jalisco)
+* Integrado en las tarjetas de contacto y en el pie de página de todas las páginas del sitio.
+
+---
+
+## ⏰ Horarios de Atención & Instagram
+
+* **Horario de atención:**
+  * **Lunes a sábado:** 10:30 am a 2:30 pm y 4:30 pm a 8:30 pm
+  * **Domingo:** 10:30 am a 2:30 pm
+* **Instagram oficial:** Enlace e ícono directo en `contacto.html` y en el pie de página:
+  [`@_amar_mx_`](https://www.instagram.com/_amar_mx_?dmpr=bXMzaWRlcng2c2Z6)
 
 ---
 

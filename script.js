@@ -1274,15 +1274,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Si estamos en la página del catálogo, renderizar el grid completo
   if (document.getElementById('products-grid')) {
-    renderProductGrid('todos');
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialCategory = urlParams.get('categoria') || 'todos';
 
+    // Activar botón visual correspondiente al cargar
     const filterButtons = document.querySelectorAll('[data-category-btn]');
     filterButtons.forEach(btn => {
+      const cat = btn.getAttribute('data-category');
+      if (cat === initialCategory) {
+        btn.classList.add('bg-bordeaux', 'text-white', 'shadow-md');
+        btn.classList.remove('bg-white', 'text-[#4A3528]', 'border-[#E8DFD5]');
+      } else {
+        btn.classList.remove('bg-bordeaux', 'text-white', 'shadow-md');
+        btn.classList.add('bg-white', 'text-[#4A3528]', 'border-[#E8DFD5]');
+      }
       btn.addEventListener('click', () => {
-        const cat = btn.getAttribute('data-category');
         filterCategory(cat);
       });
     });
+
+    renderProductGrid(initialCategory);
   }
 
   // Si estamos en la página de inicio, renderizar destacados

@@ -229,56 +229,92 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <!-- Cuadrícula centrada y equilibrada de 4 canales de contacto y atención -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
         
         <!-- Tarjeta WhatsApp -->
-        <article class="bg-[#FAF7F2] p-6 sm:p-8 rounded-3xl border border-[#EFE8DF] shadow-sm text-center flex flex-col justify-between">
+        <article class="bg-[#FAF7F2] p-6 sm:p-7 rounded-3xl border border-[#EFE8DF] shadow-sm text-center flex flex-col justify-between hover:shadow-card transition-all">
           <div>
             <div class="w-14 h-14 mx-auto rounded-2xl bg-wa/15 text-wa flex items-center justify-center text-2xl mb-4">
               <i class="fa-brands fa-whatsapp"></i>
             </div>
             <h2 class="font-title text-xl font-bold text-[#2D1E18]">WhatsApp directo</h2>
-            <p class="text-xs sm:text-sm text-[#6E5340] mt-1.5">Respuesta inmediata para pedidos y consultas</p>
-            <p class="text-base font-extrabold text-bordeaux mt-3 font-mono">+52 1 33 2213 5181</p>
+            <p class="text-xs text-[#6E5340] mt-1.5">Respuesta inmediata para pedidos y dudas sobre tallas</p>
+            <p class="text-sm sm:text-base font-extrabold text-bordeaux mt-3 font-mono">+52 1 33 2213 5181</p>
           </div>
           <a 
             href="https://wa.me/5213322135181" 
             target="_blank" 
             rel="noopener noreferrer"
-            class="touch-target mt-6 inline-flex items-center justify-center gap-2 px-5 py-3 bg-wa hover:bg-wa-hover text-white text-xs sm:text-sm font-bold rounded-xl shadow-sm transition-all"
+            class="touch-target mt-6 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-wa hover:bg-wa-hover text-white text-xs font-bold rounded-xl shadow-sm transition-all"
           >
             <i class="fa-brands fa-whatsapp text-base"></i>
             <span>Enviar mensaje</span>
           </a>
         </article>
 
-        <!-- Tarjeta Ubicación -->
-        <article class="bg-[#FAF7F2] p-6 sm:p-8 rounded-3xl border border-[#EFE8DF] shadow-sm text-center flex flex-col justify-between">
+        <!-- Tarjeta Instagram -->
+        <article class="bg-[#FAF7F2] p-6 sm:p-7 rounded-3xl border border-[#EFE8DF] shadow-sm text-center flex flex-col justify-between hover:shadow-card transition-all">
+          <div>
+            <div class="w-14 h-14 mx-auto rounded-2xl bg-[#E1306C]/10 text-[#E1306C] flex items-center justify-center text-2xl mb-4">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+            <h2 class="font-title text-xl font-bold text-[#2D1E18]">Instagram oficial</h2>
+            <p class="text-xs text-[#6E5340] mt-1.5">Conoce nuevas colecciones, fotos y outfits en tendencia</p>
+            <p class="text-sm sm:text-base font-extrabold text-bordeaux mt-3">@_amar_mx_</p>
+          </div>
+          <a 
+            href="https://www.instagram.com/_amar_mx_?dmpr=bXMzaWRlcng2c2Z6" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="touch-target mt-6 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-[#E1306C] hover:bg-[#C13584] text-white text-xs font-bold rounded-xl shadow-sm transition-all"
+          >
+            <i class="fa-brands fa-instagram text-base"></i>
+            <span>Ver Instagram</span>
+          </a>
+        </article>
+
+        <!-- Tarjeta Ubicación física con Google Maps -->
+        <article class="bg-[#FAF7F2] p-6 sm:p-7 rounded-3xl border border-[#EFE8DF] shadow-sm text-center flex flex-col justify-between hover:shadow-card transition-all">
           <div>
             <div class="w-14 h-14 mx-auto rounded-2xl bg-bordeaux/10 text-bordeaux flex items-center justify-center text-2xl mb-4">
               <i class="fa-solid fa-map-location-dot"></i>
             </div>
             <h2 class="font-title text-xl font-bold text-[#2D1E18]">Ubicación</h2>
-            <p class="text-xs sm:text-sm text-[#6E5340] mt-1.5">Tuxpan, Jalisco, México</p>
-            <p class="text-xs font-medium text-[#7A8042] mt-3">Punto céntrico de entrega local y envíos a municipios vecinos del sur de Jalisco</p>
+            <p class="text-xs text-[#6E5340] mt-1.5">Visítanos en nuestra tienda física en Tuxpan, Jalisco</p>
+            <p class="text-xs sm:text-sm font-bold text-bordeaux mt-3 leading-snug">Independencia Nacional #50B, Tuxpan, Jalisco</p>
           </div>
-          <div class="mt-6 py-2.5 px-3 bg-white rounded-xl border border-[#EFE8DF] text-xs font-semibold text-[#4A3528]">
-            Tuxpan y región sur de Jalisco
-          </div>
+          <a 
+            href="https://www.google.com/maps/search/?api=1&query=Independencia+Nacional+50B%2C+Tuxpan%2C+Jalisco" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="touch-target mt-6 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-bordeaux hover:bg-bordeaux-hover text-white text-xs font-bold rounded-xl shadow-sm transition-all"
+          >
+            <i class="fa-solid fa-location-dot text-sm"></i>
+            <span>Ver en Google Maps</span>
+          </a>
         </article>
 
-        <!-- Tarjeta Horario -->
-        <article class="bg-[#FAF7F2] p-6 sm:p-8 rounded-3xl border border-[#EFE8DF] shadow-sm text-center flex flex-col justify-between">
+        <!-- Tarjeta Horario de atención -->
+        <article class="bg-[#FAF7F2] p-6 sm:p-7 rounded-3xl border border-[#EFE8DF] shadow-sm text-center flex flex-col justify-between hover:shadow-card transition-all">
           <div>
             <div class="w-14 h-14 mx-auto rounded-2xl bg-blush-200 text-bordeaux flex items-center justify-center text-2xl mb-4">
               <i class="fa-regular fa-clock"></i>
             </div>
             <h2 class="font-title text-xl font-bold text-[#2D1E18]">Horario de atención</h2>
-            <p class="text-xs sm:text-sm text-[#6E5340] mt-1.5">Lunes a sábado: 10:00 am a 8:00 pm</p>
-            <p class="text-xs sm:text-sm text-[#6E5340] mt-1">Domingos: atención por WhatsApp</p>
+            <div class="space-y-2 mt-2 text-left bg-white/70 p-3 rounded-2xl border border-[#EFE8DF]">
+              <div>
+                <span class="block text-[11px] font-bold text-bordeaux uppercase tracking-wider">Lunes a sábado:</span>
+                <span class="text-xs text-[#4A3528]">10:30 am a 2:30 pm y 4:30 pm a 8:30 pm</span>
+              </div>
+              <div class="pt-1 border-t border-[#EFE8DF]">
+                <span class="block text-[11px] font-bold text-bordeaux uppercase tracking-wider">Domingo:</span>
+                <span class="text-xs text-[#4A3528]">10:30 am a 2:30 pm</span>
+              </div>
+            </div>
           </div>
-          <div class="mt-6 py-2.5 px-3 bg-white rounded-xl border border-[#EFE8DF] text-xs font-semibold text-[#4A3528]">
-            Entregas el mismo día acordadas
+          <div class="mt-4 py-2 px-3 bg-blush-100 rounded-xl border border-blush-300 text-[11px] font-bold text-bordeaux">
+            Atención en tienda y WhatsApp
           </div>
         </article>
 
@@ -378,17 +414,36 @@
 
         <div class="space-y-2">
           <h4 class="font-title font-bold text-sm text-white">Contacto directo</h4>
-          <p class="text-xs text-[#D3C7BC]">Tuxpan, Jalisco, México</p>
-          <p class="text-xs text-[#D3C7BC]">WhatsApp: <strong>+52 1 33 2213 5181</strong></p>
           <a 
-            href="https://wa.me/5213322135181" 
+            href="https://www.google.com/maps/search/?api=1&query=Independencia+Nacional+50B%2C+Tuxpan%2C+Jalisco" 
             target="_blank" 
-            rel="noopener noreferrer"
-            class="touch-target inline-flex items-center gap-2 text-xs font-semibold text-[#25D366] hover:underline pt-1"
+            rel="noopener noreferrer" 
+            class="hover:underline flex items-start gap-1.5 text-xs text-[#D3C7BC] hover:text-blush-200 transition-colors"
           >
-            <i class="fa-brands fa-whatsapp text-sm"></i>
-            <span>Iniciar chat de WhatsApp</span>
+            <i class="fa-solid fa-location-dot text-blush-300 mt-0.5"></i>
+            <span>Independencia Nacional #50B, Tuxpan, Jalisco</span>
           </a>
+          <p class="text-xs text-[#D3C7BC]">WhatsApp: <strong>+52 1 33 2213 5181</strong></p>
+          <div class="pt-1 flex flex-col gap-2">
+            <a 
+              href="https://wa.me/5213322135181" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="touch-target inline-flex items-center gap-2 text-xs font-semibold text-[#25D366] hover:underline"
+            >
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+              <span>Iniciar chat de WhatsApp</span>
+            </a>
+            <a 
+              href="https://www.instagram.com/_amar_mx_?dmpr=bXMzaWRlcng2c2Z6" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="touch-target inline-flex items-center gap-2 text-xs font-semibold text-blush-200 hover:text-white hover:underline"
+            >
+              <i class="fa-brands fa-instagram text-sm text-[#FAD0D8]"></i>
+              <span>Instagram: @_amar_mx_</span>
+            </a>
+          </div>
         </div>
 
       </div>

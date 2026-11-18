@@ -227,19 +227,19 @@
 
       <!-- Bloque Narrativo Principal (Contenido EXACTO palabra por palabra) -->
       <section class="bg-white rounded-3xl p-6 sm:p-10 border border-[#EFE8DF] shadow-card space-y-6 text-[#4A3528] leading-relaxed text-sm sm:text-base">
-        <p>
+        <p class="text-justify [text-justify:inter-word]">
           Mar Shop es una boutique de moda femenina ubicada en Tuxpan, Jalisco, dedicada a ofrecer prendas con estilo, accesibles y acordes a la temporada, ayudando a cada clienta a sentirse segura y cómoda con su propio estilo personal. Lo que comenzó como un negocio local ha crecido gracias a nuestra pasión por la moda, un servicio personalizado y una estrecha relación con la comunidad.
         </p>
 
-        <p>
+        <p class="text-justify [text-justify:inter-word]">
           En Mar Shop, seleccionamos cuidadosamente cada prenda de proveedores de confianza en Guadalajara y la Ciudad de México, garantizando una variedad de estilos en tendencia, productos de calidad y precios asequibles. Creemos que ir de compras es mucho más que adquirir ropa: es una oportunidad para expresar la personalidad, fortalecer la confianza y disfrutar de una experiencia personalizada.
         </p>
 
-        <p>
+        <p class="text-justify [text-justify:inter-word]">
           Nuestro compromiso es brindar una atención amable, recomendaciones honestas y opciones de moda que se adapten a diversas ocasiones y estilos de vida. Al combinar nuestro conocimiento de la clientela local con las tendencias de temporada y un firme enfoque en la satisfacción del cliente, nos esforzamos por crear una experiencia de compra que resulte cercana y memorable.
         </p>
 
-        <p>
+        <p class="text-justify [text-justify:inter-word]">
           A medida que seguimos creciendo, en Mar Shop incorporamos herramientas digitales y nuevas formas de conectar con nuestras clientas, sin perder nunca la calidez, la confianza y el espíritu comunitario que siempre han sido el corazón de nuestro negocio.
         </p>
       </section>
@@ -256,7 +256,7 @@
             <h2 class="font-title text-xl sm:text-2xl font-bold text-bordeaux-dark mb-3">
               Nuestra misión
             </h2>
-            <p class="text-sm sm:text-base text-[#5C4535] leading-relaxed">
+            <p class="text-sm sm:text-base text-[#5C4535] leading-relaxed text-justify [text-justify:inter-word]">
               Ofrecer moda accesible y de temporada a las clientas de Tuxpan y sus alrededores, brindando un servicio personalizado y una experiencia de compra que les permita sentirse seguras y satisfechas.
             </p>
           </div>
@@ -271,7 +271,7 @@
             <h2 class="font-title text-xl sm:text-2xl font-bold text-bordeaux-dark mb-3">
               Nuestra visión
             </h2>
-            <p class="text-sm sm:text-base text-[#5C4535] leading-relaxed">
+            <p class="text-sm sm:text-base text-[#5C4535] leading-relaxed text-justify [text-justify:inter-word]">
               Convertirnos en un referente en el sector de la moda en la región sur de Jalisco, creciendo a través de la innovación digital, el fortalecimiento de las relaciones con nuestras clientas y un desarrollo sostenible, manteniendo siempre nuestro compromiso con el servicio personalizado.
             </p>
           </div>
@@ -413,17 +413,36 @@
 
         <div class="space-y-2">
           <h4 class="font-title font-bold text-sm text-white">Contacto directo</h4>
-          <p class="text-xs text-[#D3C7BC]">Tuxpan, Jalisco, México</p>
-          <p class="text-xs text-[#D3C7BC]">WhatsApp: <strong>+52 1 33 2213 5181</strong></p>
           <a 
-            href="https://wa.me/5213322135181" 
+            href="https://www.google.com/maps/search/?api=1&query=Independencia+Nacional+50B%2C+Tuxpan%2C+Jalisco" 
             target="_blank" 
-            rel="noopener noreferrer"
-            class="touch-target inline-flex items-center gap-2 text-xs font-semibold text-[#25D366] hover:underline pt-1"
+            rel="noopener noreferrer" 
+            class="hover:underline flex items-start gap-1.5 text-xs text-[#D3C7BC] hover:text-blush-200 transition-colors"
           >
-            <i class="fa-brands fa-whatsapp text-sm"></i>
-            <span>Iniciar chat de WhatsApp</span>
+            <i class="fa-solid fa-location-dot text-blush-300 mt-0.5"></i>
+            <span>Independencia Nacional #50B, Tuxpan, Jalisco</span>
           </a>
+          <p class="text-xs text-[#D3C7BC]">WhatsApp: <strong>+52 1 33 2213 5181</strong></p>
+          <div class="pt-1 flex flex-col gap-2">
+            <a 
+              href="https://wa.me/5213322135181" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="touch-target inline-flex items-center gap-2 text-xs font-semibold text-[#25D366] hover:underline"
+            >
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+              <span>Iniciar chat de WhatsApp</span>
+            </a>
+            <a 
+              href="https://www.instagram.com/_amar_mx_?dmpr=bXMzaWRlcng2c2Z6" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="touch-target inline-flex items-center gap-2 text-xs font-semibold text-blush-200 hover:text-white hover:underline"
+            >
+              <i class="fa-brands fa-instagram text-sm text-[#FAD0D8]"></i>
+              <span>Instagram: @_amar_mx_</span>
+            </a>
+          </div>
         </div>
 
       </div>
