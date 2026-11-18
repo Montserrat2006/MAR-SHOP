@@ -1,0 +1,23 @@
+prompt
+ "Act as an expert e-commerce web developer and UX UI designer. Create the initial structure for a responsive and elegant website for a women's clothing boutique called 'Mar Shop', located in Tuxpan, Jalisco. Use HTML5, Tailwind CSS (via CDN), and a JavaScript file (script.js). Include a top navigation bar (header) featuring the 'Mar Shop' logo, quick links ('Home', 'Catalog', 'About Us', 'Contact'), and a pink announcement bar at the very top that reads: "Seasonal Clothing | Visit us in Tuxpan, order via WhatsApp." - 
+- **CRITICAL:** All visible text, navigation links, buttons, and placeholders on the website MUST be written in natural, localized Spanish (Mexico).
+
+Analyze the attached reference images from my Pinterest moodboard (`reference ideas for design`). Extract the color palette, typography pairing, whitespace balance, card styling, and overall aesthetic vibe from those screenshots, and translate them into Tailwind CSS classes and custom styles.
+
+
+prompt 2 "Now, add the main section (Home) featuring a trendy background image, the title "Accessible, Seasonal Fashion in Tuxpan," and a call-to-action button that reads "View Catalog." Next, create the catalog section with a menu of buttons to filter by category, for example: "All," "Blouses," "Pants," "Dresses," and "Accessories." Below the filter, design a grid containing 6 sample product cards. Each card should include: a product image, a category label, a title, the price in MXN (displayed clearly (you have to put up a Price yourself, prices must be reasonable as the shop is located in Tuxpan, Jalisco and a Little cheap because that is our differentiator), available sizes (S, M, L), and a prominent green button featuring the WhatsApp icon that says "Order via WhatsApp."" 
+
+- Inspect my local folder `inventario Mar Shop` and use the ACTUAL image files located there to populate the product grid in `script.js` (do not use external placeholder URLs; link directly to `.inventario Mar Shop[filename]`).
+
+
+Ensure that clicking any category button (e.g., 'Blouses', 'Pants', etc.) displays only the products belonging to that category, without reloading the page.
+Configure the 'Order via WhatsApp' button for any product so that, when pressed, it automatically opens a WhatsApp link ([https://wa.me/523414369560](https://wa.me/523414369560)) containing the following pre-filled, URL-encoded message:
+
+
+'Hello Mar Shop, I would like to check the availability of the following item: [Product Title] - Price: [Price] - Size: [Size].'
+
+
+Refine the entire HTML and Tailwind CSS structure so that the website is strictly optimized under a Mobile-First Design approach:
+- On mobile viewports (`< 640px`), adjust the product catalog grid to strictly 2 columns (`grid-cols-2`) with compact padding (`gap-3` or `gap-4`) so images remain clear and readable without excessive scrolling.
+- Ensure the "Pedir por WhatsApp" buttons and size selectors have comfortable touch targets (`min-h-[44px]`) easy to tap with a thumb.
+- Transform the desktop top navigation links into a smooth, functional mobile hamburger drop-down menu controlled via `script.js`.

@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="es-MX" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mar Shop | Moda Femenina Accesible y de Temporada en Tuxpan, Jalisco</title>
+  <meta name="description" content="Boutique de ropa femenina en Tuxpan, Jalisco. Encuentra las últimas tendencias de temporada a precios súper accesibles. ¡Haz tu pedido fácil y rápido por WhatsApp!">
+
+  <!-- Google Fonts: Playfair Display (Serif Editorial) + Plus Jakarta Sans (Moderna y Limpia) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Alex+Brush&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons (WhatsApp, Shopping, Menu, Ubicación, etc.) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bordeaux: {
+              DEFAULT: '#5F051C', // Deep Wine / Syrah de la paleta Pinterest
+              dark: '#460007',    // Night Bordeaux
+              light: '#7B132C',
+              hover: '#700822',
+            },
+            blush: {
+              50: '#FFF7F8',
+              100: '#FCE7EB',   // Rosa suave del moodboard
+              200: '#FAD0D8',
+              300: '#FFCFC5',   // Blush Pink pantone
+              DEFAULT: '#FCE7EB',
+            },
+            cream: {
+              DEFAULT: '#FAF7F2', // Fondo crema cálido
+              light: '#FDFBF7',
+              dark: '#F0ECE4',
+              chiffon: '#F5F3CE', // Lemon Chiffon del moodboard
+            },
+            olive: {
+              DEFAULT: '#5B5E28', // Olive Leaf
+              muted: '#7A8042',
+            },
+            mocha: {
+              DEFAULT: '#4A3528',
+              dark: '#2D1E18',
+            },
+            wa: {
+              DEFAULT: '#25D366', // Verde oficial WhatsApp
+              hover: '#1EBE5D',
+              dark: '#128C7E',
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            script: ['"Alex Brush"', 'cursive'],
+          },
+          boxShadow: {
+            'soft': '0 8px 30px rgba(95, 5, 28, 0.05)',
+            'card': '0 10px 25px -5px rgba(74, 53, 40, 0.08), 0 8px 10px -6px rgba(74, 53, 40, 0.04)',
+            'glow-wa': '0 4px 20px rgba(37, 211, 102, 0.4)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Suavizado de tipografías y scroll */
+    html {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    /* Touch Target Mínimo para Accesibilidad Móvil */
+    .touch-target {
+      min-height: 44px;
+      min-width: 44px;
+    }
+
+    /* Ocultar scrollbar horizontal en filtros móviles manteniendo deslizamiento */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Animación sutil de pulso para botón flotante */
+    @keyframes subtle-pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    .pulse-subtle {
+      animation: subtle-pulse 3s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-[#FAF7F2] text-[#2D1E18] font-sans selection:bg-blush-300 selection:text-bordeaux-dark">
+
+  <!-- ========================================================= -->
+  <!-- 1. BARRA DE ANUNCIOS ROSA SUPERIOR (Announcement Bar)     -->
+  <!-- ========================================================= -->
+  <aside 
+    role="region" 
+    aria-label="Aviso de temporada"
+    class="bg-[#FCE7EB] border-b border-[#FAD0D8] text-bordeaux-dark text-xs sm:text-sm font-medium py-2 px-4 transition-colors"
+  >
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+      <!-- Mensaje Central Solicitado -->
+      <div class="w-full text-center flex items-center justify-center gap-2">
+        <span class="inline-block text-xs">✨</span>
+        <p class="tracking-wide font-medium">
+          Ropa de temporada | Visítanos en Tuxpan, pide por WhatsApp.
+        </p>
+        <span class="inline-block text-xs">🌸</span>
+      </div>
+
+      <!-- Enlace Rápido Directo a WhatsApp (Oculto en móviles muy pequeños para no saturar) -->
+      <a 
+        href="https://wa.me/523414369560" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="hidden md:inline-flex items-center gap-1.5 text-xs font-semibold text-bordeaux hover:text-bordeaux-dark underline underline-offset-2 shrink-0 transition-opacity"
+      >
+        <i class="fa-brands fa-whatsapp text-sm text-[#1EBE5D]"></i>
+        <span>341 436 9560</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ========================================================= -->
+  <!-- 2. BARRA DE NAVEGACIÓN SUPERIOR (Header & Navbar)         -->
+  <!-- ========================================================= -->
+  <header class="sticky top-0 z-40 bg-[#FAF7F2]/95 backdrop-blur-md border-b border-[#EFE8DF] shadow-sm transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        
+        <!-- Logo 'Mar Shop' -->
+        <a href="#inicio" class="flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-bordeaux rounded-lg p-1">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-blush-100 border border-blush-300 flex items-center justify-center text-bordeaux group-hover:bg-bordeaux group-hover:text-white transition-colors duration-300">
+            <span class="font-serif font-black text-lg">M</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-bordeaux-dark leading-none">
+              Mar Shop
+            </span>
+            <span class="text-[10px] sm:text-xs font-medium text-[#7A8042] tracking-widest uppercase">
+              Boutique · Tuxpan, Jal.
+            </span>
+          </div>
+        </a>
+
+        <!-- Enlaces Rápidos de Escritorio (Desktop Navigation) -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-[#4A3528]" aria-label="Navegación principal">
+          <a href="#inicio" class="hover:text-bordeaux transition-colors py-2 relative group">
+            Inicio
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-bordeaux transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="#catalogo" class="hover:text-bordeaux transition-colors py-2 relative group">
+            Catálogo
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-bordeaux transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="#sobre-nosotras" class="hover:text-bordeaux transition-colors py-2 relative group">
+            Sobre Nosotras
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-bordeaux transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="#contacto" class="hover:text-bordeaux transition-colors py-2 relative group">
+            Contacto
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-bordeaux transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </nav>
+
+        <!-- Botón de Acción Principal (Desktop) -->
+        <div class="hidden md:flex items-center gap-3">
+          <a 
+            href="https://wa.me/523414369560?text=Hola%20Mar%20Shop%2C%20quisiera%20pedir%20informaci%C3%B3n%20sobre%20sus%20prendas%20disponibles."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="touch-target inline-flex items-center gap-2 px-4 py-2 bg-wa hover:bg-wa-hover text-white text-xs font-bold rounded-full shadow-sm hover:shadow-glow-wa transition-all duration-200"
+          >
+            <i class="fa-brands fa-whatsapp text-sm"></i>
+            <span>Atención WhatsApp</span>
+          </a>
+        </div>
+
+        <!-- Botón Hamburguesa para Móvil (< 768px) -->
+        <div class="flex items-center md:hidden">
+          <button 
+            id="mobile-menu-btn" 
+            type="button" 
+            class="touch-target w-11 h-11 flex items-center justify-center rounded-xl text-bordeaux hover:bg-blush-100 transition-colors focus:outline-none focus:ring-2 focus:ring-bordeaux" 
+            aria-label="Abrir menú de navegación"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <i id="mobile-menu-icon" class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Menú Desplegable Móvil (Controlado vía script.js) -->
+    <div 
+      id="mobile-menu" 
+      class="hidden md:hidden bg-white/95 backdrop-blur-md border-b border-[#EFE8DF] px-4 pt-3 pb-6 space-y-2 shadow-lg"
+      role="menu"
+    >
+      <a 
+        href="#inicio" 
+        class="mobile-nav-link touch-target flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-[#4A3528] hover:bg-blush-100 hover:text-bordeaux transition-colors"
+        role="menuitem"
+      >
+        <i class="fa-solid fa-house text-xs text-bordeaux/70 w-5"></i>
+        <span>Inicio</span>
+      </a>
+      <a 
+        href="#catalogo" 
+        class="mobile-nav-link touch-target flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-[#4A3528] hover:bg-blush-100 hover:text-bordeaux transition-colors"
+        role="menuitem"
+      >
+        <i class="fa-solid fa-shirt text-xs text-bordeaux/70 w-5"></i>
+        <span>Catálogo</span>
+      </a>
+      <a 
+        href="#sobre-nosotras" 
+        class="mobile-nav-link touch-target flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-[#4A3528] hover:bg-blush-100 hover:text-bordeaux transition-colors"
+        role="menuitem"
+      >
+        <i class="fa-solid fa-heart text-xs text-bordeaux/70 w-5"></i>
+        <span>Sobre Nosotras</span>
+      </a>
+      <a 
+        href="#contacto" 
+        class="mobile-nav-link touch-target flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-[#4A3528] hover:bg-blush-100 hover:text-bordeaux transition-colors"
+        role="menuitem"
+      >
+        <i class="fa-solid fa-location-dot text-xs text-bordeaux/70 w-5"></i>
+        <span>Contacto & Tuxpan</span>
+      </a>
+
+      <!-- Botón WhatsApp dentro del menú móvil -->
+      <div class="pt-2 border-t border-cream-dark">
+        <a 
+          href="https://wa.me/523414369560?text=Hola%20Mar%20Shop%2C%20quisiera%20informaci%C3%B3n%20de%20sus%20prendas." 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="touch-target w-full flex items-center justify-center gap-2 px-4 py-3 bg-wa hover:bg-wa-hover text-white rounded-xl text-sm font-bold shadow-sm"
+        >
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Escribir por WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================================= -->
+    <!-- 3. SECCIÓN PRINCIPAL (Home / Hero Section)                 -->
+    <!-- ========================================================= -->
+    <section 
+      id="inicio" 
+      class="relative overflow-hidden pt-8 pb-14 sm:py-20 lg:py-28 bg-[#FAF7F2]"
+    >
+      <!-- Fondo decorativo con textura y paleta de inspiración Pinterest -->
+      <div class="absolute inset-0 pointer-events-none opacity-40">
+        <div class="absolute top-0 right-0 w-96 h-96 rounded-full bg-blush-200/50 blur-3xl transform translate-x-1/3 -translate-y-1/3"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-cream-chiffon/70 blur-3xl transform -translate-x-1/3 translate-y-1/3"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          
+          <!-- Columna Izquierda: Mensaje y Llamado a la Acción -->
+          <div class="lg:col-span-7 text-center lg:text-left space-y-5 sm:space-y-6">
+            
+            <!-- Etiqueta de Temporada / Ubicación -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blush-100 border border-blush-300/80 text-bordeaux text-xs sm:text-sm font-semibold tracking-wide">
+              <span>🌸</span>
+              <span>Boutique Femenina en Tuxpan, Jalisco</span>
+            </div>
+
+            <!-- Título Principal Solicitado -->
+            <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold text-bordeaux-dark leading-[1.15] tracking-tight">
+              Moda Accesible y de Temporada en Tuxpan
+            </h1>
+
+            <!-- Subtítulo / Propuesta de Valor Diferenciadora -->
+            <p class="text-[#5C4535] text-sm sm:text-base lg:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              Descubre las últimas tendencias en blusas, pantalones, faldas y chamarras con precios pensados para consentirte sin gastar de más. Estilo único, prendas seleccionadas y trato personalizado directo por WhatsApp.
+            </p>
+
+            <!-- Botones de Acción (Mobile First con min-h-[44px]) -->
+            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-2">
+              <!-- Botón CTA Solicitado: 'Ver Catálogo' -->
+              <a 
+                href="#catalogo" 
+                class="touch-target w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-bordeaux hover:bg-bordeaux-hover text-white rounded-full text-sm sm:text-base font-bold shadow-md hover:shadow-lg transition-all duration-200 active:scale-95"
+              >
+                <span>Ver Catálogo</span>
+                <i class="fa-solid fa-arrow-down text-xs"></i>
+              </a>
+
+              <!-- Botón Secundario: Contacto WhatsApp -->
+              <a 
+                href="https://wa.me/523414369560?text=Hola%20Mar%20Shop%2C%20vi%20su%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20su%20ropa." 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="touch-target w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white hover:bg-blush-50 text-bordeaux border-2 border-bordeaux/20 hover:border-bordeaux rounded-full text-sm sm:text-base font-bold shadow-sm transition-all duration-200"
+              >
+                <i class="fa-brands fa-whatsapp text-lg text-wa"></i>
+                <span>Pedir por WhatsApp</span>
+              </a>
+            </div>
+
+            <!-- Mini Diferenciadores en el Hero -->
+            <div class="grid grid-cols-3 gap-2 sm:gap-4 pt-4 sm:pt-6 border-t border-[#E8DFD5] max-w-lg mx-auto lg:mx-0">
+              <div class="text-center lg:text-left">
+                <span class="block font-bold text-bordeaux text-base sm:text-lg font-serif">100%</span>
+                <span class="text-[11px] sm:text-xs text-[#6E5340]">Accesible en MXN</span>
+              </div>
+              <div class="text-center lg:text-left border-x border-[#E8DFD5] px-2">
+                <span class="block font-bold text-bordeaux text-base sm:text-lg font-serif">Tuxpan</span>
+                <span class="text-[11px] sm:text-xs text-[#6E5340]">Entregas locales</span>
+              </div>
+              <div class="text-center lg:text-left">
+                <span class="block font-bold text-bordeaux text-base sm:text-lg font-serif">S - M - L</span>
+                <span class="text-[11px] sm:text-xs text-[#6E5340]">Tallas listas</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Columna Derecha: Composición de Moda y Lookbook (Imagen Trendy) -->
+          <div class="lg:col-span-5 relative mt-4 lg:mt-0">
+            <div class="relative mx-auto max-w-sm sm:max-w-md lg:max-w-none">
+              
+              <!-- Marco Decorativo Estilo Moodboard Pinterest con Borde Suave -->
+              <div class="relative rounded-3xl overflow-hidden shadow-card border-4 border-white bg-white aspect-[4/5]">
+                <img 
+                  src="./Inventario Mar Shop/WhatsApp Image 2026-11-12 at 10.29.07 PM (4).jpeg" 
+                  alt="Moda y prendas en tendencia de Mar Shop Tuxpan" 
+                  class="w-full h-full object-cover object-center"
+                />
+                
+                <!-- Gradiente sutil y badge en la imagen -->
+                <div class="absolute inset-0 bg-gradient-to-t from-bordeaux-dark/70 via-transparent to-transparent flex flex-col justify-end p-5 text-white">
+                  <span class="text-[10px] sm:text-xs uppercase tracking-widest font-bold text-blush-200">
+                    Nueva Colección
+                  </span>
+                  <p class="font-serif text-lg sm:text-xl font-bold">
+                    Prendas de temporada con estilo boutique
+                  </p>
+                </div>
+              </div>
+
+              <!-- Tarjeta Flotante Decorativa: Tuxpan Jalisco -->
+              <div class="absolute -bottom-4 -left-3 sm:-left-6 bg-white/95 backdrop-blur-md border border-[#EFE8DF] rounded-2xl p-3 sm:p-4 shadow-card flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-blush-100 text-bordeaux flex items-center justify-center shrink-0">
+                  <i class="fa-solid fa-location-dot text-base"></i>
+                </div>
+                <div>
+                  <span class="block text-xs font-bold text-[#2D1E18]">Mar Shop Tuxpan</span>
+                  <span class="block text-[11px] text-[#7A8042]">Jalisco, México</span>
+                </div>
+              </div>
+
+              <!-- Tarjeta Flotante: WhatsApp Directo -->
+              <div class="absolute -top-3 -right-2 sm:-right-4 bg-white/95 backdrop-blur-md border border-[#EFE8DF] rounded-2xl py-2 px-3.5 shadow-card flex items-center gap-2">
+                <div class="w-2.5 h-2.5 rounded-full bg-wa animate-pulse"></div>
+                <span class="text-xs font-bold text-wa-dark">Atención en línea</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 4. SECCIÓN DEL CATÁLOGO (Category Filters & Product Grid)  -->
+    <!-- ========================================================= -->
+    <section id="catalogo" class="py-12 sm:py-20 bg-white border-y border-[#EFE8DF]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Encabezado de la Sección del Catálogo -->
+        <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+          <span class="text-xs font-bold uppercase tracking-widest text-bordeaux bg-blush-100 px-3.5 py-1 rounded-full border border-blush-200 inline-block mb-2">
+            Catálogo Exclusivo
+          </span>
+          <h2 class="font-serif text-2xl sm:text-4xl font-extrabold text-[#2D1E18] tracking-tight">
+            Nuestras Prendas de Temporada
+          </h2>
+          <p class="text-xs sm:text-base text-[#6E5340] mt-2">
+            Ropa juvenil, fresca y elegante con precios accesibles en Tuxpan. Selecciona tu talla y pide directamente por WhatsApp.
+          </p>
+        </div>
+
+        <!-- Menú de Botones para Filtrar por Categoría (Requisito: Todos, Blusas, Pantalones, Vestidos, Accesorios) -->
+        <div class="mb-6 sm:mb-10">
+          <nav 
+            class="flex items-center gap-2 overflow-x-auto no-scrollbar py-2 px-1 justify-start sm:justify-center" 
+            aria-label="Filtro de productos por categoría"
+          >
+            <!-- Botón Todos -->
+            <button 
+              type="button" 
+              data-category-btn 
+              data-category="todos"
+              class="touch-target min-h-[44px] px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-bold bg-bordeaux text-white shadow-md transition-all duration-200 shrink-0"
+              aria-selected="true"
+            >
+              Todos
+            </button>
+
+            <!-- Botón Blusas -->
+            <button 
+              type="button" 
+              data-category-btn 
+              data-category="blusas"
+              class="touch-target min-h-[44px] px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium bg-white text-[#4A3528] border border-[#E0D4C8] hover:border-bordeaux hover:text-bordeaux transition-all duration-200 shrink-0"
+              aria-selected="false"
+            >
+              Blusas y Tops
+            </button>
+
+            <!-- Botón Pantalones -->
+            <button 
+              type="button" 
+              data-category-btn 
+              data-category="pantalones"
+              class="touch-target min-h-[44px] px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium bg-white text-[#4A3528] border border-[#E0D4C8] hover:border-bordeaux hover:text-bordeaux transition-all duration-200 shrink-0"
+              aria-selected="false"
+            >
+              Pantalones y Shorts
+            </button>
+
+            <!-- Botón Vestidos -->
+            <button 
+              type="button" 
+              data-category-btn 
+              data-category="vestidos"
+              class="touch-target min-h-[44px] px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium bg-white text-[#4A3528] border border-[#E0D4C8] hover:border-bordeaux hover:text-bordeaux transition-all duration-200 shrink-0"
+              aria-selected="false"
+            >
+              Vestidos y Faldas
+            </button>
+
+            <!-- Botón Accesorios -->
+            <button 
+              type="button" 
+              data-category-btn 
+              data-category="accesorios"
+              class="touch-target min-h-[44px] px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium bg-white text-[#4A3528] border border-[#E0D4C8] hover:border-bordeaux hover:text-bordeaux transition-all duration-200 shrink-0"
+              aria-selected="false"
+            >
+              Chamarras y Accesorios
+            </button>
+          </nav>
+
+          <!-- Indicador de prendas mostradas -->
+          <div class="flex items-center justify-between text-xs text-[#7A8042] px-2 mt-2">
+            <span id="product-count-indicator">Cargando catálogo...</span>
+            <span class="hidden sm:inline">📍 Precios en Pesos Mexicanos (MXN)</span>
+          </div>
+        </div>
+
+        <!-- ========================================================= -->
+        <!-- CUADRÍCULA DE PRODUCTOS (Requisito Mobile-First):          -->
+        <!-- En móviles (< 640px): estrictamente 2 columnas (grid-cols-2) -->
+        <!-- con espaciado compacto (gap-3 o gap-4).                  -->
+        <!-- En pantallas mayores: sm:grid-cols-3 lg:grid-cols-4       -->
+        <!-- ========================================================= -->
+        <div 
+          id="products-grid" 
+          class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6"
+        >
+          <!-- Las tarjetas de producto son inyectadas dinámicamente por script.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 5. SECCIÓN SOBRE NOSOTRAS (About Us)                      -->
+    <!-- ========================================================= -->
+    <section id="sobre-nosotras" class="py-14 sm:py-20 bg-[#FAF7F2] relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          
+          <!-- Imagen de la Boutique / Concepto -->
+          <div class="lg:col-span-5 order-2 lg:order-1">
+            <div class="relative rounded-3xl overflow-hidden shadow-card border-4 border-white bg-white">
+              <img 
+                src="./Inventario Mar Shop/WhatsApp Image 2026-11-12 at 10.29.01 PM (1).jpeg" 
+                alt="Boutique Mar Shop en Tuxpan" 
+                class="w-full h-80 sm:h-96 object-cover object-center"
+              />
+              <div class="p-4 bg-white">
+                <span class="text-xs font-bold text-bordeaux uppercase tracking-wider">Moda con Amor</span>
+                <p class="font-serif text-base sm:text-lg font-bold text-[#2D1E18]">
+                  Prendas que te hacen sentir segura, bella y cómoda
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Texto descriptivo de Mar Shop -->
+          <div class="lg:col-span-7 order-1 lg:order-2 space-y-4 sm:space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blush-100 border border-blush-200 text-bordeaux text-xs font-bold tracking-wider uppercase">
+              <span>Nuestra Historia</span>
+            </div>
+            
+            <h2 class="font-serif text-2xl sm:text-4xl font-extrabold text-[#2D1E18] tracking-tight">
+              Moda Bonita y de Calidad sin Pagar de Más
+            </h2>
+
+            <p class="text-sm sm:text-base text-[#5C4535] leading-relaxed">
+              <strong>Mar Shop</strong> nació en el bello municipio de <strong>Tuxpan, Jalisco</strong> con un propósito claro: ofrecer ropa de mujer fresca, moderna y de temporada a precios realmente justos y accesibles.
+            </p>
+
+            <p class="text-sm sm:text-base text-[#5C4535] leading-relaxed">
+              Sabemos que vestir bien y a la moda no debería ser un lujo. Por eso, seleccionamos cuidadosamente cada prenda de nuestro catálogo asegurando cortes favorecedores, telas cómodas y variedad de tallas (S, M, L) para acompañarte en tu día a día o eventos especiales.
+            </p>
+
+            <!-- Tres Pilares Clave -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+              <div class="p-3.5 rounded-2xl bg-white border border-[#EFE8DF] shadow-sm">
+                <div class="w-8 h-8 rounded-full bg-blush-100 text-bordeaux flex items-center justify-center mb-2 font-bold text-xs">
+                  <i class="fa-solid fa-tag"></i>
+                </div>
+                <h4 class="font-bold text-xs sm:text-sm text-[#2D1E18]">Precios Accesibles</h4>
+                <p class="text-[11px] sm:text-xs text-[#6E5340] mt-0.5">Nuestro principal diferenciador en la región.</p>
+              </div>
+
+              <div class="p-3.5 rounded-2xl bg-white border border-[#EFE8DF] shadow-sm">
+                <div class="w-8 h-8 rounded-full bg-blush-100 text-bordeaux flex items-center justify-center mb-2 font-bold text-xs">
+                  <i class="fa-solid fa-sparkles"></i>
+                </div>
+                <h4 class="font-bold text-xs sm:text-sm text-[#2D1E18]">Prendas en Tendencia</h4>
+                <p class="text-[11px] sm:text-xs text-[#6E5340] mt-0.5">Estilos frescos inspirados en la moda actual.</p>
+              </div>
+
+              <div class="p-3.5 rounded-2xl bg-white border border-[#EFE8DF] shadow-sm">
+                <div class="w-8 h-8 rounded-full bg-blush-100 text-bordeaux flex items-center justify-center mb-2 font-bold text-xs">
+                  <i class="fa-brands fa-whatsapp text-wa"></i>
+                </div>
+                <h4 class="font-bold text-xs sm:text-sm text-[#2D1E18]">Trato Cercano</h4>
+                <p class="text-[11px] sm:text-xs text-[#6E5340] mt-0.5">Atención cálida y directa por WhatsApp.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- 6. SECCIÓN CONTACTO Y UBICACIÓN (Contact)                 -->
+    <!-- ========================================================= -->
+    <section id="contacto" class="py-14 sm:py-20 bg-white border-t border-[#EFE8DF]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+          <span class="text-xs font-bold uppercase tracking-widest text-bordeaux bg-blush-100 px-3.5 py-1 rounded-full border border-blush-200 inline-block mb-2">
+            Visítanos y Contáctanos
+          </span>
+          <h2 class="font-serif text-2xl sm:text-4xl font-extrabold text-[#2D1E18]">
+            ¿Tienes alguna duda o quieres ordenar?
+          </h2>
+          <p class="text-xs sm:text-base text-[#6E5340] mt-2">
+            Estamos en Tuxpan, Jalisco. Mándanos un mensaje y con gusto te asesoramos con tallas, medidas y apartados.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
+          
+          <!-- Tarjeta 1: WhatsApp -->
+          <div class="bg-[#FAF7F2] p-5 sm:p-6 rounded-2xl border border-[#EFE8DF] shadow-sm text-center flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 mx-auto rounded-full bg-wa/15 text-wa flex items-center justify-center text-xl mb-3">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <h3 class="font-serif font-bold text-base sm:text-lg text-[#2D1E18]">WhatsApp Directo</h3>
+              <p class="text-xs text-[#6E5340] mt-1">Respuesta inmediata para pedidos y consultas</p>
+              <p class="text-sm font-extrabold text-bordeaux mt-2 font-mono">341 436 9560</p>
+            </div>
+            <a 
+              href="https://wa.me/523414369560" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="touch-target mt-4 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-wa hover:bg-wa-hover text-white text-xs font-bold rounded-xl shadow-sm transition-all"
+            >
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+              <span>Enviar Mensaje</span>
+            </a>
+          </div>
+
+          <!-- Tarjeta 2: Ubicación Tuxpan -->
+          <div class="bg-[#FAF7F2] p-5 sm:p-6 rounded-2xl border border-[#EFE8DF] shadow-sm text-center flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 mx-auto rounded-full bg-bordeaux/10 text-bordeaux flex items-center justify-center text-xl mb-3">
+                <i class="fa-solid fa-map-location-dot"></i>
+              </div>
+              <h3 class="font-serif font-bold text-base sm:text-lg text-[#2D1E18]">Ubicación</h3>
+              <p class="text-xs text-[#6E5340] mt-1">Tuxpan, Jalisco, México</p>
+              <p class="text-xs font-medium text-[#7A8042] mt-2">Punto céntrico de entrega local y envíos a municipios vecinos</p>
+            </div>
+            <div class="mt-4 py-2 px-3 bg-white rounded-xl border border-[#EFE8DF] text-[11px] font-semibold text-[#4A3528]">
+              📍 Tuxpan y Sur de Jalisco
+            </div>
+          </div>
+
+          <!-- Tarjeta 3: Horario y Entregas -->
+          <div class="bg-[#FAF7F2] p-5 sm:p-6 rounded-2xl border border-[#EFE8DF] shadow-sm text-center flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 mx-auto rounded-full bg-blush-200 text-bordeaux flex items-center justify-center text-xl mb-3">
+                <i class="fa-regular fa-clock"></i>
+              </div>
+              <h3 class="font-serif font-bold text-base sm:text-lg text-[#2D1E18]">Horario de Atención</h3>
+              <p class="text-xs text-[#6E5340] mt-1">Lunes a Sábado: 10:00 am a 8:00 pm</p>
+              <p class="text-xs text-[#6E5340] mt-1">Domingos: Atención por WhatsApp</p>
+            </div>
+            <div class="mt-4 py-2 px-3 bg-white rounded-xl border border-[#EFE8DF] text-[11px] font-semibold text-[#4A3528]">
+              ⚡ Entregas el mismo día acordadas
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- 7. PIE DE PÁGINA (Footer)                                 -->
+  <!-- ========================================================= -->
+  <footer class="bg-[#2D1E18] text-[#FAF7F2] pt-12 pb-8 border-t border-[#4A3528]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-[#4A3528]">
+        
+        <!-- Identidad -->
+        <div class="md:col-span-2 space-y-3">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full bg-blush-100 text-bordeaux flex items-center justify-center font-serif font-bold">
+              M
+            </div>
+            <span class="font-serif text-2xl font-bold text-white tracking-tight">Mar Shop</span>
+          </div>
+          <p class="text-xs sm:text-sm text-[#D3C7BC] max-w-sm leading-relaxed">
+            Boutique femenina en Tuxpan, Jalisco. Prendas de temporada accesibles, chic y pensadas para hacerte brillar.
+          </p>
+          <div class="text-xs text-blush-200 font-medium">
+            <span>🌸 Pedidos y cotizaciones directas por WhatsApp</span>
+          </div>
+        </div>
+
+        <!-- Enlaces Rápidos -->
+        <div class="space-y-2">
+          <h4 class="font-serif font-bold text-sm text-white uppercase tracking-wider">Enlaces</h4>
+          <ul class="space-y-1.5 text-xs text-[#D3C7BC]">
+            <li><a href="#inicio" class="hover:text-blush-200 transition-colors">Inicio</a></li>
+            <li><a href="#catalogo" class="hover:text-blush-200 transition-colors">Catálogo de Temporada</a></li>
+            <li><a href="#sobre-nosotras" class="hover:text-blush-200 transition-colors">Sobre Nosotras</a></li>
+            <li><a href="#contacto" class="hover:text-blush-200 transition-colors">Contacto & Ubicación</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacto Directo -->
+        <div class="space-y-2">
+          <h4 class="font-serif font-bold text-sm text-white uppercase tracking-wider">Contacto</h4>
+          <p class="text-xs text-[#D3C7BC]">Tuxpan, Jalisco, México</p>
+          <p class="text-xs text-[#D3C7BC]">WhatsApp: <strong>+52 341 436 9560</strong></p>
+          <a 
+            href="https://wa.me/523414369560" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="touch-target inline-flex items-center gap-2 text-xs font-semibold text-[#25D366] hover:underline pt-1"
+          >
+            <i class="fa-brands fa-whatsapp text-sm"></i>
+            <span>Iniciar chat de WhatsApp</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-[#A8988B] gap-2 text-center sm:text-left">
+        <p>© 2026 Mar Shop Boutique. Todos los derechos reservados. Tuxpan, Jalisco.</p>
+        <p class="text-[11px]">Diseñado con amor para Mar Shop 🌸</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================= -->
+  <!-- 8. BOTÓN FLOTANTE DE WHATSAPP (Mobile & Desktop)          -->
+  <!-- ========================================================= -->
+  <aside class="fixed bottom-5 right-5 z-50">
+    <a 
+      href="https://wa.me/523414369560?text=Hola%20Mar%20Shop%2C%20quisiera%20consultar%20disponibilidad%20de%20prendas."
+      target="_blank" 
+      rel="noopener noreferrer"
+      aria-label="Abrir chat de WhatsApp con Mar Shop"
+      class="touch-target group flex items-center gap-2.5 px-4 py-3 bg-wa hover:bg-wa-hover text-white rounded-full shadow-glow-wa transition-all duration-300 hover:scale-105 pulse-subtle"
+    >
+      <i class="fa-brands fa-whatsapp text-2xl"></i>
+      <span class="hidden sm:inline font-bold text-xs tracking-tight">¿Tienes dudas? Escríbenos</span>
+    </a>
+  </aside>
+
+  <!-- Lógica JavaScript Principal -->
+  <script src="./script.js"></script>
+</body>
+</html>
